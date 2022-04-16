@@ -36,6 +36,6 @@ export interface SetIsLoadingAction {
 
 export type AuthAction =
   | SetAuthAction
-  | SetUserAction
   | SetErrorAction
+  | SetUserAction
   | SetIsLoadingAction;

@@ -13,9 +13,9 @@ const Event: React.FC = () => {
   const { user } = useTypedSelector((state) => state.authReducer);
 
   React.useEffect(() => {
-    fetchGuest();
-    fetchEvents(user.username);
-  }, [fetchGuest, fetchEvents, user]);
+      fetchGuest();
+      fetchEvents(user.username);
+  }, []);
 
   const addNewEvent = (event: IEvent) => {
     setModalVisible(false);
@@ -24,8 +24,7 @@ const Event: React.FC = () => {
 
   return (
     <Layout>
-      <div>{JSON.stringify(events)}</div>
-      <EventCalendar events={[]} />
+      <EventCalendar events={events} />
       <Row justify='center'>
         <Button onClick={() => setModalVisible(true)}>Add event</Button>
       </Row>

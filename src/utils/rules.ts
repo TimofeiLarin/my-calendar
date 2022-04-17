@@ -1,4 +1,3 @@
-import { message } from 'antd';
 import moment, { Moment } from 'moment';
 
 export const rules = {
